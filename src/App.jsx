@@ -5,7 +5,7 @@ export default function App() {
   const stages = [
      // Stage 1 – asdfg
     [
-      "as asd asdf gas fad",
+      "asa asd asdf gas fad",
       "sad sag fad dag gad",
       "ads fads gads sags",
       "dad fad gas sag dag",
