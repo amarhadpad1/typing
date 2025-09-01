@@ -3,44 +3,45 @@ import React, { useState, useEffect, useRef } from "react";
 export default function App() {
   // Stages with easy → harder words
   const stages = [
-    // Stage 1 – Home Row
+     // Stage 1 – asdfg
     [
-      "sad dad had lad mad",
-      "gas gag sag tag rag",
-      "all hall fall ball call",
-      "jag lag bag rag nag",
-      "fad lad had bad pad",
+      "as asd asdf gas fad",
+      "sad sag fad dag gad",
+      "ads fads gads sags",
+      "dad fad gas sag dag",
+      "as asd asdf gads fad",
     ],
-    // Stage 2 – Top Row
+    // Stage 2 – jkl;
     [
-      "wet yet get bet set",
-      "ten pen men hen den",
-      "pet let met net vet",
-      "tip sip rip lip dip",
-      "quit wit lit sit fit",
+      "jaj jajk jakl kjlk jlk;",
+      "jkl jkl; klj; lkj; ;lkj",
+      "jal jak jak; jlk lkj",
+      "jajk jklk lkj; kl;j ;jkl",
+      "kjal lkaj jalk jakl ;ljk",
     ],
-    // Stage 3 – Bottom Row
+    // Stage 3 – qwert
     [
-      "man can ran ban fan",
-      "van pan tan nan jan",
-      "mix six fix box fox",
-      "zoo too moo boo coo",
-      "jazz buzz fuzz fizz",
+      "we weq qwe rew trew",
+      "qwe qweq wer rew werq",
+      "ret wer rew req wret",
+      "rew rewq reqw qwre trwe",
+      "qwe wer ret rew tre",
     ],
-    // Stage 4 – Short Sentences
+    // Stage 4 – yuiop
     [
-      "a man ran",
-      "the cat sat",
-      "dad had a hat",
-      "pet the dog",
-      "the fox ran",
+      "yup yupio yui yuop yuiop",
+      "poi poiu oiu oiup iuop",
+      "yui yop poi you iop",
+      "yui iop oiu poi uio",
+      "yupio iopuy uopiy ypoi yupo",
     ],
-    // Stage 5 – Full Sentences
+    // Stage 5 – zxcvb and nm,./
     [
-      "earlier rare alien line rear line lie",
-      "light night right might sight tight bright",
-      "cat bat rat sat mat fat hat pat",
-      "the quick brown fox jumps over the lazy dog",
+      "zxcv bnm zxcvb nm,./",
+      "cvbz xcvb bnm zxnm",
+      "nm,./ ,./nm ./nm, nm,./",
+      "zxcvb nm,./ bcvxz mnxz",
+      "zxnm cvbz mn,./ nmzxc",
     ],
   ];
 
