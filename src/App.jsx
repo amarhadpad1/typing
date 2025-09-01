@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 export default function App() {
   // Stages with easy → harder words
@@ -52,6 +52,16 @@ export default function App() {
 
   // New state for start button
   const [started, setStarted] = useState(false);
+
+  // Ref for input
+  const inputRef = useRef(null);
+
+  // Focus input whenever started changes to true
+  useEffect(() => {
+    if (started && inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, [started]);
 
   // Current key expected
   const currentKey = text[currentCharIndex] || "✔";
@@ -113,7 +123,7 @@ export default function App() {
           onClick={() => setStarted(true)}
           className="bg-green-500 hover:bg-green-600 text-black font-bold text-2xl px-10 py-6 rounded-2xl shadow-lg transition-transform transform hover:scale-105"
         >
-          🚀 Start Typing 
+          🚀 Start Typing
         </button>
       ) : (
         <>
@@ -144,13 +154,14 @@ export default function App() {
           </div>
 
           {/* Input box */}
-          <input type="text"
+          <input
+            ref={inputRef}
+            type="text"
             value={userInput}
             onChange={handleChange}
             className="w-full max-w-xl h-12 p-4 text-lg text-black rounded-lg"
             placeholder="Type Here..."
-         />
-
+          />
 
           {/* Virtual Keyboard */}
           <div className="mt-6 p-4 bg-gray-800 rounded-lg inline-block">
